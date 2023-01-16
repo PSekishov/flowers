@@ -12,6 +12,7 @@ import DashboardPage from './pages/DashboardPage';
 import OrdersPage from './pages/OrdersPage';
 import ProductsPage from './pages/ProductsPage';
 import CustomersPage from './pages/CustomersPage';
+import SinglePage from './pages/SinglePage';
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='dashboard' element={<DashboardPage />} />
           <Route path='orders' element={<OrdersPage />} />
           <Route path='products' element={<ProductsPage />} />
+          <Route path='products/:id' element={<SinglePage />} />
           <Route path='customers' element={<CustomersPage />} />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
