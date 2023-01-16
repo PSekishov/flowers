@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.module.css';
+import styles from './App.module.css';
 
 // LAYOUT
 import Header from './layout/Header';
@@ -19,8 +19,9 @@ const App = () => {
 
   return (
     <div className="app">
+     
       <Header />
-      <main className="main">
+      <main className={styles.main}>
         <Routes>
           <Route index element={<IndexPage />} />
           <Route path='dashboard' element={<DashboardPage />} />
@@ -31,6 +32,7 @@ const App = () => {
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </main>
+      
       <Footer />
     </div>
   );
